@@ -42,10 +42,16 @@ function isEven(number) {
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
-
+function fahrenheitToCelsius (fahrenheit) {
+ return (5/9) * (fahrenheit-32);
+}
+  
 // 7. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
+function celsiusToFahrenheit (celsius) {
+    return (celsius*9/5) + (32);
+}
 
 // 8. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -53,10 +59,19 @@ function isEven(number) {
 // fahrenheitToCelsius function.
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
-
+function fahrenheitToKelvin (fahrenheit) {
+    return (fahrenheit-32) * (5/9) +273.15; 
+}
 // 9. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
+function lesser (a,b) {
+if (a > b) {
+    return (b);   
+} else {
+    return (a);
+}
+}
 
 // 10. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
@@ -69,6 +84,19 @@ function isEven(number) {
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
+function multigreeting(names, language) {
+if (language === 'en'){
+    return 'Hello, ' + names + '!'; 
+    }else if (language === 'es') {
+    return '¡Hola, ' + names + '!'; 
+   } 
+   else if (language === 'fr') {
+   return 'Bonjour, ' + names + '!';
+   } 
+   else if (language === 'eo') { 
+   return 'Saluton, ' + names + '!';
+   }  
+}
 
 // 11. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
@@ -96,3 +124,6 @@ function isEven(number) {
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
+function gcd (a,b) {
+    if (a % 2 === 0) && (b % 2 === 0))
+}
